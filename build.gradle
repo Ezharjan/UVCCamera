@@ -2,12 +2,20 @@
 
 buildscript {
     repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+
+
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-        google()
-        jcenter()
+
+
+//        google()
+//        jcenter()
         flatDir {
             dirs 'libs'
         }
@@ -23,14 +31,19 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
         maven { url 'https://raw.githubusercontent.com/saki4510t/libcommon/master/repository/' }
         maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
-        google()
-        jcenter()
+//        google()
+//        jcenter()
         flatDir {
             dirs 'libs'   // aar目录
         }
